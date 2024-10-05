@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash board</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+             grid-template-columns: auto 1fr;
+             overflow: hidden;
+        }
+        .sidebar {
+            background-color: black;
+            width: 250px;
+            color: #fff;
+            height: 1000px;
+            transition: transform 0.3s ease-in-out
+        }
+        .sidebar.closed{
+            transform: translateX(-200px);
+        }
+        .content {
+            background-color: aqua;
+            transition: transform 0.3s ease-in-out;
+            width: calc(100% + 250px);
+        }
+        .content.sidebar-closed {
+            transform: translateX(-200px);
+
+        }
+        button{
+            padding: 12px;
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar" >
+            <ul>
+                <li>nav</li>
+                <li>Join-us</li>
+                <li>About</li>
+                <li>service</li>
+            </ul>
+        </div>
+        <div class="content">
+
+            <button id="btn">menu</button>
+            our content
+        </div>
+    </div>
+
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
